@@ -6,10 +6,15 @@
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 20:10:04 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/09/20 20:10:14 by bkaleta          ###   ########.fr       */
+/*   Updated: 2025/09/21 01:07:21 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int c);
+int	ft_isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
+}

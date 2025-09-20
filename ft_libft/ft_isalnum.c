@@ -6,10 +6,15 @@
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 20:09:14 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/09/20 20:09:27 by bkaleta          ###   ########.fr       */
+/*   Updated: 2025/09/21 01:12:26 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isalnum(int c);
+int	ft_isalnum(int c)
+{
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (1);
+	return (0);
+}

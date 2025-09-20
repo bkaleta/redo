@@ -6,7 +6,7 @@
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 21:31:57 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/09/21 01:14:19 by bkaleta          ###   ########.fr       */
+/*   Updated: 2025/09/21 01:22:13 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,16 @@ int	main(void)
 	int_checker("Test #3 ft_isascii", ft_isascii, 128, 0);
 	int_checker("Test #4 ft_isascii", ft_isascii, 127, 1);
 
-	printf("%d\n", isdigit(-1));
+	printf("\nFUNCTION #5 Tests for: ft_isprint...\n");
+	int_checker("Test #1 ft_isprint", ft_isprint, -1, 0);
+	int_checker("Test #2 ft_isprint", ft_isprint, ' ', 1);
+	int_checker("Test #3 ft_isprint", ft_isprint, ' ' -1, 0);
+	int_checker("Test #4 ft_isprint", ft_isprint, 'z', 1);
+	int_checker("Test #5 ft_isprint", ft_isprint, 'z' +1, 1);
+	int_checker("Test #6 ft_isprint", ft_isprint, 126, 1);
+	int_checker("Test #7 ft_isprint", ft_isprint, 127, 0);
+	
+	// printf("%d\n", isdigit(-1));
 
 	return (0);
 }

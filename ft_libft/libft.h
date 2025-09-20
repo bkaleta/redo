@@ -6,7 +6,7 @@
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 19:47:08 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/09/20 20:25:16 by bkaleta          ###   ########.fr       */
+/*   Updated: 2025/09/20 23:08:36 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stddef.h>
+
+// includes for test
+# include <ctype.h>
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);

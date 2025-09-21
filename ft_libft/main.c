@@ -6,7 +6,7 @@
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 21:31:57 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/09/21 12:13:27 by bkaleta          ###   ########.fr       */
+/*   Updated: 2025/09/21 12:48:50 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,13 @@ int	main(void)
 	// printf("%d\n", isdigit(-1));
 	
 	printf("\nFUNCTION #9 Tests for: ft_memcpy...\n");
+	printf("Test #1 memcepy\n");
+	char dest[7];
+	char *src = "12345";
+	//printf("SRC: %s\nDEST: %s\n", src, dest);
+	memcpy(dest, src, 5);
+	printf("SRC: %s\nDEST: %s\n", src, dest);
+
 
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 21:31:57 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/09/21 18:43:04 by bkaleta          ###   ########.fr       */
+/*   Updated: 2025/09/21 21:07:05 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,10 +94,14 @@ int	main(void)
 	char desttest[7];
 	ft_memcpy(desttest, src, 5);
 	printf("SRC: %s\nDEST: %s\n", src, dest);
-
+	
 	printf("\nFUNCTION #10 Tests for: ft_memmove...\n");
-
+	
 	printf("\nFUNCTION #11 Tests for: ft_strlcpy...\n");
+	char	*teststrlcpysrc = "123";
+	char	testdst[10];
+	ft_strlcpy(testdst, teststrlcpysrc, 10);
+	printf("SRC: %s\nDEST: %s\n", teststrlcpysrc, testdst);
 
 
 	return (0);

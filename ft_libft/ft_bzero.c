@@ -6,10 +6,13 @@
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 20:08:32 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/09/20 20:08:39 by bkaleta          ###   ########.fr       */
+/*   Updated: 2025/09/21 12:10:39 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n);
+void	ft_bzero(void *s, size_t n)
+{
+	ft_memset(s, 0, n);
+}

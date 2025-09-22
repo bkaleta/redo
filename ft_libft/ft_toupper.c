@@ -6,10 +6,15 @@
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 20:15:54 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/09/20 20:16:07 by bkaleta          ###   ########.fr       */
+/*   Updated: 2025/09/22 14:13:30 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_toupper(int c);
+int	ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
+}

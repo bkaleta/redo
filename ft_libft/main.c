@@ -6,7 +6,7 @@
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 21:31:57 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/09/21 21:07:05 by bkaleta          ###   ########.fr       */
+/*   Updated: 2025/09/22 18:10:01 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,66 @@ int	main(void)
 	ft_strlcpy(testdst, teststrlcpysrc, 10);
 	printf("SRC: %s\nDEST: %s\n", teststrlcpysrc, testdst);
 
+	printf("%c\n", toupper('-'));
+	printf("%c\n", ft_toupper('-'));
+	printf("%c\n", tolower(' '));
+	printf("%c\n", ft_tolower(' '));
 
+	char *xd = NULL;
+	char tekst[] = "konstantynp";
+	xd  = strchr(tekst, 's');
+	printf("strchr: %s\n", xd);
+
+	char *xd2 = NULL;
+	char tekst2[] = "konstantynp";
+	xd2  = ft_strchr(tekst2, 's');
+	printf("ft_strchr: %s\n", xd2);
+
+	char tekst3[] = "tripouille";
+	xd2  = strchr(tekst3, 't' + 256);
+	printf("STRCHR: %s\n", xd2);
+	xd2  = ft_strchr(tekst3, 't' + 256);
+	printf("FT_STRCHR: %s\n", xd2);
+	
+	xd = strrchr(tekst2, 'a');
+	printf("strrchr: %s\n", xd);
+	xd = ft_strrchr(tekst2, 'a');
+	printf("ft_strchr: %s\n", xd);
+	
+	int res = strncmp("abc", "abx", 3);
+	printf("strncmp: %d\n", res);
+	res = strncmp("abcx", "abc", 10);
+	printf("strncmp: %d\n", res);
+	res = ft_strncmp("abc", "abx", 3);
+	printf("ft_strncmp: %d\n", res);
+	res = ft_strncmp("abcx", "abc", 10);
+	printf("ft_strncmp: %d\n", res);
+	
+	void *result = memchr(tekst2, 'a', 10);
+	printf("memchr: %p\n%s\n\n", result, (char *)result);
+	result = ft_memchr(tekst2, 'a', 10);
+	printf("ft_memchr: %p\n%s\n\n", result, (char *)result);
+	
+	int a = memcmp(tekst, tekst2, 10);
+	printf("memcmp: %d\n", a);
+	a = ft_memcmp(tekst, tekst2, 10);
+	printf("ft_memcmp: %d\n", a);
+	
+	char b[] = {-128, 0 , 127, 0};
+	char b1[] = {-128, 0 , 127, 0};
+	int	b3 = memcmp(b, b1, 4);
+	printf("memcmp: %d\n", b3);
+	b3 = ft_memcmp(b, b1, 4);
+	printf("ft_memcmp: %d\n", b3);
+	
+	const char	*largestring = "Foo Bar	Baz";
+	const char	*smallstring = "Bar";
+	char *ptr;
+
+	ptr = strstr(largestring, smallstring);
+	printf("strstr: %s\n", ptr);
+	ptr = ft_strnstr(largestring, smallstring, 10);
+	printf("ft_strnstr: %s\n", ptr);
 	return (0);
 }
 

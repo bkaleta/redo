@@ -6,10 +6,15 @@
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 20:19:51 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/09/20 20:19:57 by bkaleta          ###   ########.fr       */
+/*   Updated: 2025/09/22 14:14:39 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_tolower(int c);
+int	ft_tolower(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
+}

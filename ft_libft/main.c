@@ -6,7 +6,7 @@
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 21:31:57 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/09/22 18:10:01 by bkaleta          ###   ########.fr       */
+/*   Updated: 2025/09/23 21:49:32 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -162,7 +162,19 @@ int	main(void)
 	ptr = strstr(largestring, smallstring);
 	printf("strstr: %s\n", ptr);
 	ptr = ft_strnstr(largestring, smallstring, 10);
-	printf("ft_strnstr: %s\n", ptr);
+	printf("ft_strnstr: %s\n\n", ptr);
+
+	printf("Atoi: %d     ft_atoi: %d\n", atoi("123"), ft_atoi("123"));
+	printf("Atoi: %d     ft_atoi: %d\n", atoi("   -123"), ft_atoi("   -123"));
+	printf("Atoi: %d     ft_atoi: %d\n", atoi("   +123"), ft_atoi("   +123"));
+	printf("Atoi: %d     ft_atoi: %d\n", atoi("   123  +"), ft_atoi("   123  +"));
+	printf("Atoi: %d     ft_atoi: %d\n", atoi("   123  -"), ft_atoi("   123  -"));
+	printf("Atoi: %d     ft_atoi: %d\n", atoi("   123  -    "), ft_atoi("   123  -    "));
+	printf("Atoi: %d     ft_atoi: %d\n", atoi("   123   6"), ft_atoi("   123   6"));
+	printf("Atoi: %d     ft_atoi: %d\n", atoi(""), ft_atoi(""));
+	printf("Atoi: %d     ft_atoi: %d\n", atoi("012"), ft_atoi("012"));
+	printf("Atoi: %d     ft_atoi: %d\n", atoi("	-+2147483649222"), ft_atoi("	-+2147483649222"));
+
 	return (0);
 }
 

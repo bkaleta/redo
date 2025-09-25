@@ -6,7 +6,7 @@
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 21:31:57 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/09/23 21:49:32 by bkaleta          ###   ########.fr       */
+/*   Updated: 2025/09/25 18:40:50 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,6 +128,7 @@ int	main(void)
 	printf("strrchr: %s\n", xd);
 	xd = ft_strrchr(tekst2, 'a');
 	printf("ft_strchr: %s\n", xd);
+
 	
 	int res = strncmp("abc", "abx", 3);
 	printf("strncmp: %d\n", res);
@@ -174,6 +175,35 @@ int	main(void)
 	printf("Atoi: %d     ft_atoi: %d\n", atoi(""), ft_atoi(""));
 	printf("Atoi: %d     ft_atoi: %d\n", atoi("012"), ft_atoi("012"));
 	printf("Atoi: %d     ft_atoi: %d\n", atoi("	-+2147483649222"), ft_atoi("	-+2147483649222"));
+
+	int numItems = 15;
+	int *myArray = calloc(numItems, sizeof(int));
+
+	// Write into the memory
+	for(int i = 0; i < numItems; i++) {
+	myArray[i] = i + 1;
+	}
+
+	// Display the contents of the memory
+	for(int i = 0; i < numItems; i++) {
+	printf("%d ", myArray[i]);
+	}
+	printf("\n");
+	// Free the memory
+	free(myArray);
+	myArray = NULL;
+	myArray = ft_calloc(numItems, sizeof(int));
+	for(int i = 0; i < numItems; i++) {
+	myArray[i] = i + 1;
+	}
+
+	// Display the contents of the memory
+	for(int i = 0; i < numItems; i++) {
+	printf("%d ", myArray[i]);
+	}
+	printf("\n");
+	free(myArray);
+	myArray = NULL;
 
 	return (0);
 }

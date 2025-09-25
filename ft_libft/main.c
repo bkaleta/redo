@@ -6,7 +6,7 @@
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 21:31:57 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/09/25 18:40:50 by bkaleta          ###   ########.fr       */
+/*   Updated: 2025/09/25 22:59:53 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -204,6 +204,8 @@ int	main(void)
 	printf("\n");
 	free(myArray);
 	myArray = NULL;
+
+	
 
 	return (0);
 }

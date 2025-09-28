@@ -6,10 +6,14 @@
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/28 12:45:03 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/09/28 12:45:33 by bkaleta          ###   ########.fr       */
+/*   Updated: 2025/09/28 22:47:33 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void*));
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
+{
+	del(lst->content);
+	free(lst);
+}

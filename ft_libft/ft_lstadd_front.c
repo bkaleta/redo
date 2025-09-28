@@ -6,7 +6,7 @@
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/28 12:41:53 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/09/28 14:03:14 by bkaleta          ###   ########.fr       */
+/*   Updated: 2025/09/28 18:46:18 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	
+	new->next = *lst;
+	*lst = new;
 }

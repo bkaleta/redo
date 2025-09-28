@@ -6,7 +6,7 @@
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 19:47:08 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/09/28 12:48:01 by bkaleta          ###   ########.fr       */
+/*   Updated: 2025/09/28 23:00:53 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,9 @@
 // bonus struct
 typedef struct s_list
 {
-	void *content;
-	struct s_list *next;
-} t_list;
-
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

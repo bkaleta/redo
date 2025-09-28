@@ -64,7 +64,7 @@ else
 SRCS := $(BASE_SRCS)
 endif
 
-OBJS := $(SRCS:.c=.o)
+OBJS = $(SRCS:.c=.o)
 
 # program testowy w tym samym folderze
 TEST_BIN := libft_local_tests

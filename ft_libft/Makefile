@@ -9,7 +9,7 @@ AR       := ar
 ARFLAGS  := rcs
 RM       := rm -f
 
-# ---- LISTY ŹRÓDEŁ (uzupełnij!) ----
+# ---- LISTY ŹRÓDEŁ ----
 BASE_SRCS := \
 	ft_atoi.c \
 	ft_bzero.c \
@@ -57,31 +57,28 @@ BONUS_SRCS := \
 	ft_lstiter.c \
 	ft_lstmap.c
 
-# --- wybór SRCS zależnie od celu ---
-ifdef WITH_BONUS
-SRCS := $(BASE_SRCS) $(BONUS_SRCS)
-else
-SRCS := $(BASE_SRCS)
-endif
+BASE_OBJS  := $(BASE_SRCS:.c=.o)
+BONUS_OBJS := $(BONUS_SRCS:.c=.o)
 
-OBJS = $(SRCS:.c=.o)
-
-# program testowy w tym samym folderze
+# program testowy (opcjonalnie)
 TEST_BIN := libft_local_tests
 TEST_SRC := main.c
 
 .PHONY: all bonus clean fclean re check run check-asan
 
+# --- DEFAULT: tylko baza ---
 all: $(NAME)
 
-bonus: WITH_BONUS=1
-bonus: $(NAME)
+$(NAME): $(BASE_OBJS)
+	@$(AR) $(ARFLAGS) $@ $^
+	@echo "✔️  Created $@ (base)"
+
+# --- BONUS: dobuduj bonusowe .o i dołóż do archiwum ---
+bonus: $(NAME) $(BONUS_OBJS)
+	@$(AR) $(ARFLAGS) $(NAME) $(BONUS_OBJS)
 	@echo "✨ Built $(NAME) with BONUS"
 
-$(NAME): $(OBJS)
-	@$(AR) $(ARFLAGS) $@ $^
-	@echo "✔️  Created $@"
-
+# kompilacja pojedynczych .c → .o
 %.o: %.c
 	@$(CC) $(CFLAGS) -I. -c $< -o $@
 
@@ -100,7 +97,7 @@ check-asan: clean $(TEST_BIN)
 	ASAN_OPTIONS=detect_leaks=1 ./$(TEST_BIN)
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(BASE_OBJS) $(BONUS_OBJS)
 	@echo "🧹 Object files removed"
 
 fclean: clean

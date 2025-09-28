@@ -6,10 +6,13 @@
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/28 12:41:53 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/09/28 12:42:06 by bkaleta          ###   ########.fr       */
+/*   Updated: 2025/09/28 14:03:14 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	
+}

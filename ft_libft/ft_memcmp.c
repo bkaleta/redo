@@ -6,7 +6,7 @@
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 20:11:51 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/09/25 18:41:48 by bkaleta          ###   ########.fr       */
+/*   Updated: 2025/09/28 11:33:28 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	t1 = (unsigned char *)s1;
 	t2 = (unsigned char *)s2;
 	i = 0;
-
 	while (i < n)
 	{
 		if (t1[i] != t2[i])

@@ -6,7 +6,7 @@
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 20:15:35 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/09/26 12:34:54 by bkaleta          ###   ########.fr       */
+/*   Updated: 2025/09/28 11:31:57 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ char	**ft_split(char const *s, char c)
 	if (!out)
 		return (NULL);
 	out = split_words(s, c, out, len);
-	printf("%ld\n", len);
 	return (out);
 }
 
@@ -97,7 +96,7 @@ static char	**split_words(char const *s, char c, char **out, size_t len)
 	return (out);
 }
 
-static char		**free_split(char **out, size_t word)
+static char	**free_split(char **out, size_t word)
 {
 	while (word > 0)
 	{

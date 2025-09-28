@@ -6,7 +6,7 @@
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 20:19:04 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/09/22 18:24:39 by bkaleta          ###   ########.fr       */
+/*   Updated: 2025/09/28 11:34:33 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	while (haystack[i] != '\0' && i <= len)
 	{
 		j = 0;
-		while (haystack[i+j] == needle[j] && needle[j] != '\0' && i + j < len)
+		while (haystack[i + j] == needle[j] && needle[j] != '\0' && i + j < len)
 		{
 			if (needle[j + 1] == '\0')
 				return ((char *) &haystack[i]);

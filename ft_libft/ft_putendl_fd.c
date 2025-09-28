@@ -6,10 +6,14 @@
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 20:13:41 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/09/20 20:13:55 by bkaleta          ###   ########.fr       */
+/*   Updated: 2025/09/28 11:23:18 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd)
+{
+	write(fd, s, ft_strlen(s));
+	write(fd, "\n", 1);
+}

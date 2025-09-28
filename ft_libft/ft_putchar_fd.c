@@ -6,10 +6,13 @@
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/20 20:13:17 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/09/20 20:13:32 by bkaleta          ###   ########.fr       */
+/*   Updated: 2025/09/28 11:11:38 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd);
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}

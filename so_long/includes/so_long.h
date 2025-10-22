@@ -1,26 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkaleta <bkaleta@student.42warsaw.pl>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 18:06:53 by bkaleta           #+#    #+#             */
-/*   Updated: 2025/10/22 20:08:38 by bkaleta          ###   ########.fr       */
+/*   Created: 2025/10/22 20:05:49 by bkaleta           #+#    #+#             */
+/*   Updated: 2025/10/22 20:06:43 by bkaleta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#pragma once
 
-int	main(void)
-{
-	void	*mlx;
-	void	*mlx_win;
-
-	mlx = mlx_init();
-	mlx_win = mlx_new_window(mlx, 800, 600, "Hello world!");
-	mlx_loop(mlx);
-	(void)mlx_win; 
-
-	return (0);
-}
+# include <mlx.h>
